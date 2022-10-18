@@ -12,6 +12,7 @@ the [SupplyChainSecurityCon](https://events.linuxfoundation.org/open-source-summ
 event. The talks focused on SBOMs, SLSA, VEX, provenance, attestation and signing. He's what I picked up at the event
 over the 4 days.
 
+
 ![image]({{site.baseurl}}/assets/images/2022-09_convention-centre.jpg)
 
 I think everyone had a slide with [this XKCD](https://xkcd.com/2347) to drill home the problem the industry is facing.
