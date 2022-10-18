@@ -8,7 +8,7 @@ tag: conferences sbom vex supply-chain slsa provenance attestation
 Last week I attended the Linux Foundation's [Open Source Summit Europe](https://events.linuxfoundation.org/open-source-summit-europe/) here in my hometown of Dublin where I mainly camped out at the [SupplyChainSecurityCon](https://events.linuxfoundation.org/open-source-summit-europe/about/supplychainsecuritycon/) event. The talks focused on SBOMs, SLSA, VEX, provenance, attestation and signing. He's what I picked up at the event over the 4 days. 
 
 
-![image]({{site.baseurl}}/assets/img/2022-09_convention-centre.jpg)
+![image]({{site.baseurl}}/assets/images/2022-09_convention-centre.jpg)
 
 
 I think everyone had a slide with [this XKCD](https://xkcd.com/2347) to drill home the problem the industry is facing.
@@ -17,7 +17,7 @@ I think everyone had a slide with [this XKCD](https://xkcd.com/2347) to drill ho
 There were lots of great announcements at the keynotes like Europe setting up its own chapter of the Linux Foundation, Meta handing over PyTorch to the Linux Foundation, lots of great work around sustainability and Linus pushing to merge Rust into the Linux Kernel. Among the keynotes were two security focused talks from Christopher Robinson aka CRob and Paul Vixie.
 
 
-![image]({{site.baseurl}}/assets/img/2022-09_linus_opensourcesummit_europe.jpg)
+![image]({{site.baseurl}}/assets/images/2022-09_linus_opensourcesummit_europe.jpg)
 
 
 Christopher’s talk “The Future of Open Source is Trust” focused on as open source software has evolved so has the threat landscape and highlighted the the great work being done by the OpenSSF which has the following initiatives
@@ -35,7 +35,7 @@ Paul Vixie’s talk was a great history lesson entitled “ Revisiting Total Cos
 
 The problem with supply chains was almost always communicated through the SLSA diagram below, with the incentive to do something about the problem coming from the EO14028, and the solution being implementing SLSA and producing SBOMs. The SBOM analogy everyone reached for was it's basically the ingredients label used to communicate what is contained in the food you’re buying - with VEX being the allergy advice. 
 
-![image]({{site.baseurl}}/assets/img/2022-09_slsa_supply_chain.png)
+![image]({{site.baseurl}}/assets/images/2022-09_slsa_supply_chain.png)
 
 
 ### Terminology 
@@ -49,7 +49,7 @@ SBOM - Software Bill of Materials is a nested inventory, a list of ingredients t
 VEX - Vulnerability Exploitability eXchange is a form of a security advisory with the goal allowing a software supplier or other parties to assert the status of specific vulnerabilities in a particular product. Allow both suppliers and users to focus on vulnerabilities that pose the most immediate risk, while not investing time in searching for or patching vulnerabilities that are not exploitable and therefore have no impact.
 
 
-![image]({{site.baseurl}}/assets/img/2022-09_ingredients.png)
+![image]({{site.baseurl}}/assets/images/2022-09_ingredients.png)
 
 
 [Provenance](https://www.tiktok.com/@chainguard_dev/video/7133203786927050027?is_from_webapp=v1&item_id=7133203786927050027) - is metadata about how an artifact was built, including the build process, top-level source, and dependencies.
