@@ -1,6 +1,6 @@
 title: "_scurity"
 author: "ismisepaul"
-description: "Thoughts on product security, application security and hacking."
+description: "Thoughts on product security, software development, application security and hacking."
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
