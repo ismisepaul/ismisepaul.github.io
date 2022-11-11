@@ -1,3 +1,5 @@
+# Theme: https://github.com/niklasbuschmann/contrast
+
 title: "_scurity"
 author: "ismisepaul"
 description: "Thoughts on product security, software development, application security and hacking."
@@ -10,7 +12,8 @@ excerpt_separator: "\n\n\n"
 show_excerpts: true        # show article excerpts on the home page
 show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
+minimal: true             # use a dark header
+dark_header: true           # keep the header dark
 
 paginate: 5
 
@@ -21,11 +24,12 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:ismisepaul@proton.me"}
+  - { title: Mail, icon: envelope, url: "mailto:ismisepaul@proton.me" }
   - { title: Twitter, icon: twitter, url: "https://twitter.com/ismisepaul" }
-  - {title: Github, icon: github, url: "https://github.com/ismisepaul"}
+  - { title: Mastodon, icon: mastodon, url: "https://infosec.exchange/@ismisepaul" }
+  - { title: Github, icon: github, url: "https://github.com/ismisepaul" }
   - { title: Keybase, icon: keybase, url: "https://keybase.io/ismisepaul" }
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - { title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
