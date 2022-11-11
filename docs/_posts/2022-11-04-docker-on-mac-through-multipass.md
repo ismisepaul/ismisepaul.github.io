@@ -8,9 +8,9 @@ tag: docker docker-compose macos
 Moving from Ubuntu to macOS meant losing native support for Docker but luckily [Multipass](https://multipass.run/)
 came to the rescue to give a native like experience.
 
-Multipass is a lightweight VM manager for Linux, Windows and macOS. It uses KVM on Linux, Hyper-V on Windows and 
-HyperKit on macOS to run the VM with minimal overhead. https://github.com/canonical/multipass
 
+Multipass is a lightweight VM manager for Linux, Windows and macOS. It uses KVM on Linux, Hyper-V on Windows and 
+HyperKit on macOS to run the VM with minimal overhead. [https://github.com/canonical/multipass](https://github.com/canonical/multipass)
 
 Features 
 
@@ -22,7 +22,7 @@ Features
 
 ## Installation
 
-```
+```console
 brew install –cask multipass
 ```
 
@@ -35,7 +35,7 @@ to adjust the size of the disk.
 Multipass has a ready-made VM / [workflow](https://ubuntu.com/blog/docker-on-mac-and-windows-multipass?_ga=2.217931027.447270926.1668021980-112168335.1668021980) 
 with Docker and Portainer called `docker`. You can create it with
 
-```
+```console
 multipass launch docker --cpus 4 --disk 200G --mem 16G
 ```
 
@@ -43,8 +43,7 @@ Get more info on your VM
 
 ```console
 multipass info docker
-```
-```console
+
 Name:           docker
 State:          Running
 IPv4:           192.168.64.2
@@ -57,20 +56,19 @@ Memory usage:   1.3G out of 15.6G
 
 ### Install docker and docker-compose on macOS
 
-```console
-brew cask install docker
-```
+To interact with the docker engine on the Multipass VM you'll need to install docker and optionally docker-compose on
+macOS.
 
 ```console
+brew cask install docker
 brew install docker-compose
 ```
 
-Docker will try to connect to the Docker Engine but will be unsuccessful. Try it by running the following
+Docker will try to connect to the Docker Engine but will be unsuccessful - later we'll tell Docker where to connect 
+to the Docker Engine so for now you'll get the following error
 
 ```console
 docker ps
-```
-```
 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 ```
 
@@ -78,43 +76,39 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 
 ### Set up Passwordless SSH Access to the VM
 
-This part is important as it'll play a key role in the native docker like experience.
-
 1) Ensure you have generated an SSH key, if not `ssh-keygen -t ed25519 -C <YOUR-EMAIL>`
+
 2) Get the IP of your VM `multipass list`
 ```console
-➜  ~ multipass list
+multipass list
 Name                    State             IPv4             Image
 docker                  Running           192.168.64.2     Ubuntu 21.10
 ```
 3) Copy your SSH public key to the clipboard `cat .ssh/id_ed25519.pub | pbcopy`
+
 4) Get a shell on the VM `multipass shell 192.168.64.2` 
+
 5) Paste your SSH public key to the VM `echo <COPIED PUBLIC KEY> >> .ssh/authorized_keys`
+
 6) Now try SSH to the VM `ssh ubuntu@192.168.64.2` you should log in without being promoted for a password
 
 ### Set the Docker Context
 
 You can use the docker command to connect to remote docker instances e.g. cloud providers or in this case the Docker 
-engine running on the Multipass VM.
+Engine running on the Multipass VM.
 
-Within the macOS console run the following
+From a macOS console run the following (replace the IP with that of your VM)
 
 ```console
 # Create the context 
 docker context create multipass-docker --docker "host=ssh://ubuntu@192.168.64.2"
-```
 
-```console
 # Verify the context has been created 
 docker context list
-```
 
-```console
 # Set the context 
 docker context use multipass-docker
-```
 
-```console
 # Run the following to verify - should output "CONTAINER ID IMAGE" etc.
 docker ps
 ```
@@ -150,7 +144,7 @@ curl -LO https://dependencytrack.org/docker-compose.yml
 docker-compose up -d
 ```
 
-Set up two SSH local forwards from you mac to the VM
+Set up two SSH local forwards from your Mac to the VM
 
 ```bash
 # For the Dependency Track UI
