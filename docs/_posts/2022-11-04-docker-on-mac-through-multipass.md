@@ -69,6 +69,7 @@ to the Docker Engine so for now you'll get the following error
 
 ```console
 docker ps
+
 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 ```
 
@@ -86,9 +87,9 @@ docker                  Running           192.168.64.2     Ubuntu 21.10
 ```
 3) Copy your SSH public key to the clipboard `cat .ssh/id_ed25519.pub | pbcopy`
 
-4) Get a shell on the VM `multipass shell 192.168.64.2` 
+4) Get a shell on the VM `multipass shell docker` 
 
-5) Paste your SSH public key to the VM `echo <COPIED PUBLIC KEY> >> .ssh/authorized_keys`
+5) Paste your SSH public key to `.ssh/authorized_keys` on the VM
 
 6) Now try SSH to the VM `ssh ubuntu@192.168.64.2` you should log in without being promoted for a password
 
