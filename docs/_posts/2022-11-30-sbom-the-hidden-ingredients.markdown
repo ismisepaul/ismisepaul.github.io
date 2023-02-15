@@ -9,7 +9,7 @@ tag: sbom supply-chain owasp automation devsecops
 With [78% of code in the codebase being open source](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html)
 the contents of software in respect to the packages, libraries and what assembled the software is a black box. SBOMs are
 being hailed as the solution to this visibility problem, the established analogy being they're the ingredient label on
-software. But what if the SBOM didn't tell the full story and the software contained some hidden ingredients?
+for software. But what if the SBOM didn't tell the full story and the software contained some hidden ingredients?
 
 
 ## Automation
@@ -27,13 +27,13 @@ image.
 ## Generating SBOMs
 
 Working with OWASP [Security Shepherd](https://github.com/OWASP/SecurityShepherd) I've gone ahead and set up SBOM 
-generation at two stages. The first SBOM is generated during the Maven using the `pom.xml`. The second is being
-produced when the docker images are being built and the application being packaged into them.
+generation at two stages. The first SBOM is generated from Maven using the `pom.xml` and the second is being
+produced when the docker images are being built and the application is packaged into them.
 
 ### Maven
 
-To generate an SBOM against the `pom.xml` I've used another of Steve's projects the
-[CycloneDX maven plugin ](https://github.com/CycloneDX/cyclonedx-maven-plugin). You simply import it into the pom like so
+To generate an SBOM against the `pom.xml` [CycloneDX Maven Plugin](https://github.com/CycloneDX/cyclonedx-maven-plugin) 
+is being utilised. To get up and running it simply needs to be added to the `pom.xml`
 
 ```xml
 <plugin>
@@ -43,7 +43,7 @@ To generate an SBOM against the `pom.xml` I've used another of Steve's projects 
 </plugin>
 ```
 
-Then the following maven [build](https://github.com/OWASP/SecurityShepherd/blob/6aae0a513726204e63202c1d1b4a7d675b5242b9/.github/workflows/release.yml#L29)
+Then run the maven command below which is being done [here](https://github.com/OWASP/SecurityShepherd/blob/6aae0a513726204e63202c1d1b4a7d675b5242b9/.github/workflows/release.yml#L29)
 
 ```bash
 mvn clean install -Pdocker -DskipTests -B -DexcludeTestProject=true cyclonedx:makeBom
@@ -51,24 +51,23 @@ mvn clean install -Pdocker -DskipTests -B -DexcludeTestProject=true cyclonedx:ma
 
 ### Docker
 
-For the Docker images I've decided to go the Anchore's [Syft](https://github.com/anchore/syft) where they conveniently
+For the Docker images Anchore's [Syft](https://github.com/anchore/syft) was chosen where they conveniently
 offer it as a [Github Action](https://github.com/anchore/sbom-action).
 
-SBOMs are being [generated](https://github.com/OWASP/SecurityShepherd/blob/6aae0a513726204e63202c1d1b4a7d675b5242b9/.github/workflows/release.yml#L37) from these three Docker image
+SBOMs are being [generated](https://github.com/OWASP/SecurityShepherd/blob/6aae0a513726204e63202c1d1b4a7d675b5242b9/.github/workflows/release.yml#L37) 
+from these three Docker image
 
 1) Tomcat
 2) MariaDb
 3) MongoDb
 
 
-### Analysing SBOMs
+## Analysing SBOMs
 
-We'll push the results into [Dependency Track](https://docs.dependencytrack.org/getting-started/deploy-docker/)
-and gain the much needed visibility. This is an OWASP project, so you get all that open source goodness and the project itself is really polished and
-easy to set up and use. What's great is the project is `built using a thin server architecture and an API-first design`
-so it's super easy to set up automation around the project. Big shout out to the project leaders Steve Springett and
-Niklas Düster for an awesome job!
-
+Results will be published into [Dependency Track](https://docs.dependencytrack.org/getting-started/deploy-docker/)
+to gain the much needed visibility. The project itself is really polished and easy to set up and use. What's great is 
+the project is `built using a thin server architecture and an API-first design` so it's super easy to set up automation 
+around the project.
 
 Docker compose is an easy way of getting up and running and the maintainers have provided a compose file
 
@@ -86,5 +85,23 @@ to go ahead and set up an API key. Out of the box there's one set up already und
 `PROJECT_CREATION_UPLOAD`
 
 ![](../assets/images/2022-11-30-dependency-track-api-setup.png)
+
+
+### Pushing the SBOMs
+
+```bash
+curl http://localhost:80801 -H 'X-Api-Key: $DEPENDENCY_TRACK_TOKEN'
+```
+
+```http
+PUT /api/v1/bom HTTP/1.1
+Host: localhost:8081
+Connection: close
+X-Api-Key: y9m8LcDq4SFvSpsExH5i74K8gMD6jDwq
+Content-Length: 384744
+Content-Type: application/json
+
+{"projectName": "security-shepherd", "projectVersion": "3.2", "autoCreate": true, "bom": ... } 
+```
 
 
