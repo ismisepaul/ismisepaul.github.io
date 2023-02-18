@@ -155,38 +155,56 @@ Chris argues we don't need to Sec in DevSecOps, that it's just DevOps because se
 lists the top 10 failures as
 
 1. The infinity graph
+
 He hates the DevSecOps [infinity graph](https://www.synopsys.com/glossary/what-is-devsecops/_jcr_content/root/synopsyscontainer/column_799096233_cop/colRight/image.coreimg.svg/1620854193880/devsecops.svg)
 as he argues that pipelines is a better way. Threat modelling should sit outside the pipeline but that's okay don't force
 everything into the pipeline.
+
 2. Security as a special team
+
 Security shouldn't be left to a small number of people. He makes the point that there should be a foundational layer 
 not just appsec training for developers but also coding for the security team. You need to understand the challenges
 developers face.
+
 3. Vendor defined DevOps
+
 Just because the cloud vendor does it that way you should just consider that their approach and Embrace the reality of 
 your devops.
+
 4. Big Company Envy
+
 Etsy, Facebook and Netflix have been doing this for years. It's an incremental progression. You could use the [OWASP 
 DevSecOps maturity model](https://owasp.org/www-project-devsecops-maturity-model/) or look at [OWASP SAMM](https://owaspsamm.org/) 
 and applied it to DevSecOps and road map where you need to get to in the future.
+
 5. Marketing term infatuation
+
 He dislikes the "Shift left!" - what about everywhere else? All things have to work together. He explains that RASP is 
 powerful now and with no false positives. We should be implementing security everywhere and concerning ourselves with it 
 everywhere not just left.
+
 6. Overcomplicated pipelines and doing everything now
+
 Start simple, live simply. Start with one or two tools. You won't solve everything immediately.
+
 7. Security as a gatekeeper
+
 We have to enable the business and developers. He recommends using the phrase _Drop the no, try yes, if..._ where the 
 se of _if_ instead of _but_ is more effective. Look to culture change, practice empathy and understand what our 
 developers have to deal with. How they use your tools. He recommends providing coaches from each discipline (Life coach 
 for application security) essentially a person who is between the champion and the security team.
+
 8. Noisy security tools and too many
+
 Tune the tools! Never waste anyone's time. So when adding a new tool add minimal policy - just coz the tool does 29 
 different things doesn't mean you turn them on. Take a more static approach. Results of the highest fidelity. Ask for
 feedback.
+
 9. Lack of threat modelling
+
 He explains that threat modelling happens outside the pipeline where you should attach threat modelling to new feature.
 Teach everyone to threat model and bring threat modelling to where they operate.
+
 10. Vulnerable code in the wild
 Look at the [OWASP Top 10 CICD risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/) ad embed SCA in the pipelines
 
