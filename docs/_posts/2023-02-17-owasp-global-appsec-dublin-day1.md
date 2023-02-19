@@ -19,8 +19,8 @@ Project). I get you got to keep the wasp though...
 It's always frustrating when there's a clash of talks that you're interested in, but you've got to pick one. The
 morning sessions especially suffered from this so I'm looking forward to seeing the videos go up to catch what I missed.
 
-Over the two conference days, I attended the following talks and took a lot of notes where this is essentially those
-notes where I'm going to split this up into two separate posts
+Over the first day of the conference I attended the following talks and took a lot of notes (this is essentially those
+notes). I'll also split this into two parts covering day two in a separate post
 
 ### Day 1
 
@@ -30,14 +30,6 @@ notes where I'm going to split this up into two separate posts
 - Why winning the war in cybersecurity means winning more of the everyday battles (Jessica Robinson)
 - Bootstrap and increase your software assurance with OWASP SAMM v2.1 (Sebastien Deleersnyder & Bart De Win)
 - Server Side Prototype Pollution (Gareth Heyes)
-
-### Day 2
-
-- Shifting Security Everywhere (Tanya Janca)
-- OWASP Serverless Top 10 (Tal Melamed)
-- AI-Assisted Coding: The Future of Software Development; between Challenges and Benefits (Dr Magda Chelly)
-- Developer Driven Security in high-growth environments (Jakub Kaluzny)
-- Get On With The Program: Threat Modelling In and For Your Organization (Izar Tarandach)
 
 If there was an overall theme I think it'd be _Threat Modelling_ and I was happy to see a lot of talks on the topic as
 I'm interested in how different people perform threat modelling, how to scale it, and what tools people use.
@@ -158,60 +150,60 @@ next week because of the vulnerability?
 Chris argues we don't need to Sec in DevSecOps, that it's just DevOps because security is a part of DevOps already. He
 lists the top 10 failures as
 
-1. The infinity graph
+1- The infinity graph
 
 He hates the DevSecOps [infinity graph](https://www.synopsys.com/glossary/what-is-devsecops/_jcr_content/root/synopsyscontainer/column_799096233_cop/colRight/image.coreimg.svg/1620854193880/devsecops.svg)
 as he argues that pipelines are a better way. Threat modelling should sit outside the pipeline but that's okay don't force
 everything into the pipeline.
 
-2. Security as a special team
+2- Security as a special team
 
 Security shouldn't be left to a small number of people. He makes the point that there should be a foundational layer
 not just appsec training for developers but also coding for the security team. You need to understand the challenges
 developers face.
 
-3. Vendor-defined DevOps
+3- Vendor-defined DevOps
 
 Just because the cloud vendor does it that way you should just consider their approach and Embrace the reality of
 your DevOps.
 
-4. Big Company Envy
+4- Big Company Envy
 
 Etsy, Facebook, and Netflix have been doing this for years. It's an incremental progression. You could use the [OWASP
 DevSecOps maturity model](https://owasp.org/www-project-devsecops-maturity-model/) or look at [OWASP SAMM](https://owaspsamm.org/)
 and applied it to DevSecOps and road map where you need to get to in the future.
 
-5. Marketing term infatuation
+5- Marketing term infatuation
 
 He dislikes the "Shift left!" - what about everywhere else? All things have to work together. He explains that RASP is
 powerful now and with no false positives. We should be implementing security everywhere and concerning ourselves with it
 everywhere not just left.
 
-6. Overcomplicated pipelines and doing everything now
+6- Overcomplicated pipelines and doing everything now
 
 Start simple, live simply. Start with one or two tools. You won't solve everything immediately.
 
-7. Security as a gatekeeper
+7- Security as a gatekeeper
 
 We have to enable the business and developers. He recommends using the phrase _Drop the no, try yes, if..._ where the
 use of _if_ instead of _but_ is more effective. Look to culture change, practice empathy and understand what our
 developers have to deal with. How they use your tools. He recommends providing coaches from each discipline (Life coach
 for application security) essentially a person who is between the champion and the security team.
 
-8. Noisy security tools and too many
+8- Noisy security tools and too many
 
 Tune the tools! Never waste anyone's time. So when adding a new tool add minimal policy - just coz the tool does 29
 different things don't mean you turn them on. Take a more static approach. Results of the highest fidelity. Ask for
 feedback.
 
-9. Lack of threat modelling
+9- Lack of threat modelling
 
 He explains that threat modelling happens outside the pipeline where you should attach threat modelling to a new feature.
 Teach everyone to threat model and bring threat modelling to where they operate.
 
-10. Vulnerable code in the wild
+10- Vulnerable code in the wild
 
-11. Look at the [OWASP Top 10 CICD risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/) ad embed SCA in 
+Look at the [OWASP Top 10 CICD risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/) ad embed SCA in 
 the pipelines
 
 
