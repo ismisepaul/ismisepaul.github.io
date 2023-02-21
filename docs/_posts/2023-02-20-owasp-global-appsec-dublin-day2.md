@@ -6,7 +6,7 @@ categories: conference appsec prodsec
 tag: owasp appsec prodsec threat-modelling
 ---
 
-[Previously](2023-02-17-owasp-global-appsec-dublin-day1.md) I said threat modelling was a big theme at the conference,
+[Previously]({% link _posts/2023-02-17-owasp-global-appsec-dublin-day1.md %}) I said threat modelling was a big theme at the conference,
 but I think embracing failure would be another. Lots of presenters shared their failures and how they learned from them
 and grew their programs from those lessons learned. This is something I've really got behind recently. Another thought 
 I had when people presented especially around solutions was what's the role of the product/application security team?
