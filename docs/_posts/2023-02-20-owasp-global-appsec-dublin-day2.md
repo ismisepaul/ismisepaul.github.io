@@ -399,6 +399,6 @@ Importance of templates
 #### Closing
 
 That's it for my time at OWASP Global AppSec Dublin which overall had some really good talks and I encourage people to
-check them out when they get posted. If you went and didn't feel motivated to try you hand a threat modelling I don't
+check them out when they get posted. If you went and didn't feel motivated to try your hand a threat modelling I don't
 think we were at the same conference. I'd also encourage people to go and sign [https://github.com/owasp-change/owasp-change.github.io](https://github.com/owasp-change/owasp-change.github.io)
 as I feel this is an important change that needs to happen to keep OWASP relevant (much more than a simple and questionable rebrand).
