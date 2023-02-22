@@ -6,29 +6,33 @@ categories: conference appsec prodsec
 tag: owasp appsec prodsec threat-modelling
 ---
 
-[Previously]({% link _posts/2023-02-17-owasp-global-appsec-dublin-day1.md %}) I said threat modelling was a big theme at the conference,
-but I think embracing failure would be another. Lots of presenters shared their failures and how they learned from them
-and grew their programs from those lessons learned. This is something I've really got behind recently. Another thought 
-I had when people presented especially around solutions was what's the role of the product/application security team?
+[Previously]({% link _posts/2023-02-17-owasp-global-appsec-dublin-day1.md %}) I said threat modelling was a big theme at 
+the conference, but I think embracing failure would be another. Lots of presenters shared their failures and how they 
+learned from them and grew their programs from those lessons learned. This is something I've really got behind recently. 
+Another thought I had when people presented especially around solutions was what's the role of the product/application 
+security team?
 
 
 
 ![](../assets/images/2023-02-owasp-fry-meme.jpg)
 
-I've seen a lot of _"we build our own tools"_ which can lead to the product security team becoming a development team
-because once you start building things the team owns it and have to maintain them, even enforce the rules they set to
+A lot of teams say _"we build our own tools"_ which can lead to the product security team becoming a development team
+because once you start building things the team owns it and have to maintain them, even enforce the rules they set on
 other teams (practice what you preach) like security scans, threat modelling, etc. Also, if the software is integral to the
 business then you're on the hook if there are any bugs or your software is slowing down teams or pushing out products. What
 about when the one or two people who built the software leave? Is there talent on the team to take over or does the
 business hand over the software to a development team?
 
-There are also folks who say _"we run SAST, DAST, SCA, container scanning, we automate threat modelling,
-etc. etc."_ this can lead to the product security team becoming an ops team looking after the upkeep and management of
-those tools. The day-to-day may get in the way of what others feel the product security team _should_ be doing such as
-being an internal pentest team, security research, building custom training based on vulnerabilities found in the
-organisation's products, and anything else people find _cool_. There are many opinions on this, and I don't think
-I've seen the right answer / the right balance for a product security team. It's something to bear in mind
-when building out a program.
+A lot more common is running and maintaining security tool _"we run SAST, DAST, SCA, container scanning, we automate 
+threat modelling, etc. etc."_ this can lead to the product security team becoming an ops team looking after the upkeep 
+and management of those tools. The day-to-day may get in the way of what others feel the product security team _should_ 
+be doing such as being an internal pentest team, security research, building custom training based on vulnerabilities 
+found in the organisation's products, and anything else people find _cool_. 
+
+There are many opinions on this, and I don't think I've seen the right answer / the right balance for a product security 
+team. Some don't even call it product security and larger organisations split activities into separate teams altogether, 
+where you've got a separate SCA team for instance. Anyway it's something to bear in mind when building out a program and 
+when you listen to conference talks about how people do things where they work.
 
 Here's a list of resources from day 2 
 
