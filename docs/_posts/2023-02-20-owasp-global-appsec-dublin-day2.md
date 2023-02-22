@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "OWASP AppSec Dublin 2023 - Day 2"
-date:   2023-02-19 09:01:12 +0000
+date:   2023-02-22 10:18:12 +0000
 categories: conference appsec prodsec
 tag: owasp appsec prodsec threat-modelling
 ---
