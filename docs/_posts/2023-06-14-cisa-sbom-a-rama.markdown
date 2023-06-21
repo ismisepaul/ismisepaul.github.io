@@ -11,7 +11,7 @@ virtually attended. Talks categorized into 3 - Governments & Industry, CISA Work
 
 ## Overview
 
-* Schedule https://www.cisa.gov/news-events/events/sbom-rama
+* Schedule [https://www.cisa.gov/news-events/events/sbom-rama](https://www.cisa.gov/news-events/events/sbom-rama)
 * Talks from industry, governments and CISA SBOM working groups with a discussion section
 * They’ll be setting up an asynchronous way of working through a mailing list (coming soon)
 * Sharing the slides is going to take some time after the event
@@ -23,22 +23,22 @@ virtually attended. Talks categorized into 3 - Governments & Industry, CISA Work
   * [CSAF 2.0 Profile 5: VEX](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#45-profile-5-vex)
   * [CycloneDX](https://cyclonedx.org/capabilities/vex/)
   * [OpenVEX](https://github.com/openvex/spec)
-  * SPDX 3.0 Release Candidate https://spdx.dev/news/
+  * SPDX 3.0 Release Candidate [https://spdx.dev/news/](https://spdx.dev/news/)
 * The state of SBOM is still in its infancy but is moving very fast with more attention being drawn to them from government demands etc.
 * Folks are thinking beyond SBOM to cover Cloud, AI, Quantum etc. suggestion is to rename SBOM as it doesn’t capture where the industry is heading
 * Folks are talking about the end of CVSS with
   * [Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) KVE
-  * Exploit Prediction Scoring System (EPSS) https://www.first.org/epss/
+  * Exploit Prediction Scoring System (EPSS) [https://www.first.org/epss/](https://www.first.org/epss/)
   * Stakeholder-Specific Vulnerability Categorization - SSVC
 * Most new folks join the On Ramps & Adoption Working group
-* They have an SBOM calendar https://calendar.google.com/calendar/u/0/embed?src=hqnbr3lk8ngjgv04g6ir5d5duc@group.calendar.google.com
+* They have an SBOM calendar [https://calendar.google.com/calendar/u/0/embed?src=hqnbr3lk8ngjgv04g6ir5d5duc@group.calendar.google.com](https://www.first.org/epss/)
 
 
 ## Governments & Industry
 
 ### EU Cyber Resilience Act
 
-https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
+[https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act](https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act)
 
 * Set up to decrease the amount of vulnerabilities in hardware and software.
 * If you want to place hardware and software within the 27 member states there are obligations for manufactures, distributors and importers to adhere to cybersecurity best practices.
@@ -81,7 +81,7 @@ Two main issues identified so far…
 * SBOM are in a state like the early days of the internet you’d go to a site and there’d be a gif with a guy digging
 * Spent 6 months negotiating an NDA to get an SBOM because it was so controversial a few years back - they were claiming this is IP
 * They’re at the crawl stage
-* They created an OSS tool to help consume SBOMs https://github.com/nyph-infosec/daggerboard
+* They created an OSS tool to help consume SBOMs [https://github.com/nyph-infosec/daggerboard](https://github.com/nyph-infosec/daggerboard)
 * The team is creating guidance on "When to Publish a VEX Statement" o The guidance will build upon the guidance document under development by the CISA VEX Working Group
 * The team is collaborating with the NYP team to determine how to use Daggerboard for this iteration
 * The VEX content generation will begin once the plans for using Daggerboard are finalized
@@ -173,7 +173,7 @@ VEX implementations
 * [CSAF 2.0 Profile 5: VEX](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#45-profile-5-vex)
 * [CycloneDX](https://cyclonedx.org/capabilities/vex/)
 * [OpenVEX](https://github.com/openvex/spec)
-* SPDX 3.0 Release Candidate https://spdx.dev/news/
+* SPDX 3.0 Release Candidate [https://spdx.dev/news/](https://spdx.dev/news/)
 
 ### SBOM Sharing
 
@@ -218,7 +218,7 @@ VEX implementations
 * Pragmatic Practices - for field contents.
 * Next Steps
   * Publish of pragmatic practices for minimum fields
-* Working on SBOM Types - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
+* Working on SBOM Types - [https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf)
 * Survey results (what folks want next)
   * SBOM quality
   * SBOM inventory detection types
@@ -245,7 +245,7 @@ Looking at the table below
 ### On Ramps & Adoption
 
 * This is the group that most folks initially join
-* Recommended looking at Log4Shell Response Patterns & Learnings from Them https://www.infoq.com/presentations/log4shell-security-response-patterns/
+* Recommended looking at Log4Shell Response Patterns & Learnings from Them [https://www.infoq.com/presentations/log4shell-security-response-patterns/](https://www.infoq.com/presentations/log4shell-security-response-patterns/)
 * Why companies would rather not produce an SBOM
   * License violations
   * "Unfixable" issues
@@ -255,7 +255,7 @@ Looking at the table below
 
 The end of CVSS - other standards are emerging as better measures of security
 * Known Exploited Vulnerabilities Catalog KVE
-* Exploit Prediction Scoring System (EPSS) https://www.first.org/epss/
+* Exploit Prediction Scoring System (EPSS) [https://www.first.org/epss/](https://www.first.org/epss/)
 * Stakeholder-Specific Vulnerability Categorization - SSVC
 
 ![](../assets/images/2023-06-cisa-sbom/2023-06-fda-use-case.png)
@@ -272,11 +272,11 @@ There was a discussion portion that lasted just over an hour here are the highli
 * SBOM is a solution looking for a problem - we need to convenience these people
 * Before log4shell - 8am - by 10am all products have been identified as having log4j and by 10 days all products where fixed
 * We’re not including the big tech companies in the working groups
-* Create case studies / wins so I can say they’re in the same industry and I could use what they’re doing
+* Create case studies / wins so I can say they’re in the same industry, and I could use what they’re doing
 * If this is just an SBOM solution it’ll fall flat on its face, this summer they’re issuing a white paper with potential directions, the naming problem - what we call things - its got to scale and go across all use cases
 * Need to think about AI and SBOMs for models
 * Even if you’re not willing to share SBOM, as a provider they should be able to attest that they are doing SCA, SAST, DAST etc.
-* Move away from the word SBOM - in cloud world its observability - its a type of introspection - the word SBOM is a victim of its own success - the value is observability - you being able to observe the building of your software
+* Move away from the word SBOM - in cloud world its observability - it's a type of introspection - the word SBOM is a victim of its own success - the value is observability - you being able to observe the building of your software
 * Once you build the rails from left to right of metadata - maybe push SSDF attestation, threat data, VEX documents and have a supply chain control plane
 * Moving away from CVSS to …
 * Tools vendors are not ingesting yet - how asset management tools ingest these - if we had a redaction method the tools will move forward
