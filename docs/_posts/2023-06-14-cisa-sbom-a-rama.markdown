@@ -46,7 +46,7 @@ https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
 * At the very least manufacturers need to draw up an SBOM with top-level dependencies, no requirement to make it publically available.
 * This proposal was made in September 2022 with them looking to put it into enforcement in 2024. 
 
-![](2023-06-cisa-sbom/2023-06-eu-timeline-cyber-reslience-act.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-eu-timeline-cyber-reslience-act.png)
 
 
 ### Citi
@@ -75,7 +75,7 @@ Two main issues identified so far…
 
 ### New York-Presbyterian Hospital
 
-![](2023-06-cisa-sbom/2023-06-work-in-progress.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-work-in-progress.png)
 
 * SBOM are in a state like the early days of the internet you’d go to a site and there’d be a gif with a guy digging
 * Spent 6 months negotiating an NDA to get an SBOM because it was so controversial a few years back - they were claiming this is IP
@@ -94,12 +94,12 @@ Takeaways
 * Incremental sophistication crawl, walk, run
 * Working with 3rd party vendors grow the ecosystem
 
-![](2023-06-cisa-sbom/2023-06-sbom-healthcase-poc.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-sbom-healthcase-poc.png)
 
 
 ### SBOMs in the Automotive Industry - Auto-ISAC SBOM
 
-![](2023-06-cisa-sbom/2023-06-automotive-supply-chain.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-automotive-supply-chain.png)
 
 3 Phase Approach
 
@@ -140,7 +140,7 @@ Phase 3
 
 Trialling rollout across difference sectors - automotive, software and medical
 
-![](2023-06-cisa-sbom/2023-06-sbom-myths-vs-facts.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-sbom-myths-vs-facts.png)
 
 ## CISA Working Groups
 
@@ -165,7 +165,7 @@ Led by: Art Manion
 
 Visualizing a VEX document
 
-![](2023-06-cisa-sbom/2023-06-vex-document-whats-included.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-vex-document-whats-included.png)
 
 
 VEX implementations
@@ -188,7 +188,7 @@ VEX implementations
   * We need a central common place to store SBOMs
   * Contract language will mean a lot - that's when vendors will take this seriously
 
-![](2023-06-cisa-sbom/2023-06-utility-managing-security-fix.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-utility-managing-security-fix.png)
 
 ### SBOM for the Cloud
 
@@ -234,11 +234,11 @@ Looking at the table below
 * Green overall consensus
 
 
-![](2023-06-cisa-sbom/2023-06-sbom-common-understanding.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-sbom-common-understanding.png)
 
-![](2023-06-cisa-sbom/2023-06-sbom-beyond.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-sbom-beyond.png)
 
-![](2023-06-cisa-sbom/2023-06-sbom-depth.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-sbom-depth.png)
 
 
 ### On Ramps & Adoption
@@ -257,7 +257,7 @@ The end of CVSS - other standards are emerging as better measures of security
 * Exploit Prediction Scoring System (EPSS) https://www.first.org/epss/
 * Stakeholder-Specific Vulnerability Categorization - SSVC
 
-![](2023-06-cisa-sbom/2023-06-fda-use-case.png)
+![](../assets/images/2023-06-cisa-sbom/2023-06-fda-use-case.png)
 
 ## Discussion
 
