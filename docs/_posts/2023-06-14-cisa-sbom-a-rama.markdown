@@ -8,6 +8,7 @@ tag: cisa sbom
 Sharing some highlights and notes from CISA's [SBOM-a-rama](https://www.cisa.gov/news-events/events/sbom-rama) I 
 virtually attended. Talks categorized into 3 - Governments & Industry, CISA Working Groups, and Discussion
 
+
 ## Overview
 
 * Schedule https://www.cisa.gov/news-events/events/sbom-rama
