@@ -34,14 +34,16 @@ ubuntu           latest            9d45648b4030   7 days ago      101MB
 ```
 
 
+
 # Grype
+_____
 
 [Grype](https://github.com/anchore/grype) is a vulnerability scanner maintained by Anchore. It can be used to scan 
 container images and filesystems. Grype can scan from podman, Docker, image archives, OCI, Singularity, local directories 
 and files, SBOMs, and directly from registries. Anchore have developed a separate tool called 
 [Syft](https://github.com/anchore/syft) that generates SBOMs where these can then be scanned with Grype.
 
-## CSV Template
+### CSV Template
 Using the template below will allow you to output the results in a CSV format
 - Create a new folder called `grype` on your filesystem e.g. `$HOME/security-tools/grype`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
@@ -55,17 +57,17 @@ Using the template below will allow you to output the results in a CSV format
 ```
 {% endraw %}
 
-## Scanning Images
+### Scanning Images
 
-### [Option 1] Installed Grype
+#### [Option 1] Installed Grype
 
-#### Install
+##### Install
 ```shell
 brew tap anchore/grype
 brew install grype
 ```
 
-#### Run
+##### Run
 
 SHA `9d45648b4030` is that of the Ubuntu image - see "Preparing Images" above
 
@@ -73,7 +75,7 @@ SHA `9d45648b4030` is that of the Ubuntu image - see "Preparing Images" above
 grype -o template -t $HOME/security-tools/grype/csv.tmpl 9d45648b4030  
 ```
 
-### [Option 2] Using Docker
+#### [Option 2] Using Docker
 
 ```shell
 docker run --rm -it \
@@ -84,13 +86,14 @@ docker run --rm -it \
 
 
 # Trivy
+_____
 
 Trivy is a vulnerability scanner maintained by Aqua Security. It can be used to scan software artifacts and also 
 deployments. Trivy can be used to scan container images, filesystems, Git Repository (remote), Virtual Machine Image, 
 Kubernetes. The tool can be used to detect OS packages and software dependencies in use (SBOM), known vulnerabilities 
 (CVEs), IaC issues and misconfigurations, sensitive information and secrets, and software licenses.
 
-## CSV Template
+### CSV Template
 
 This will allow you to output the results in a CSV format
 - Create a new folder called `trivy` on your filesystem e.g. `$HOME/security-tools/trivy`
@@ -108,7 +111,7 @@ This will allow you to output the results in a CSV format
 ```
 {% endraw %}
 
-## Docker Context
+### Docker Context
 
 Get current docker context
 
@@ -124,11 +127,11 @@ desktop-linux *    Docker Desktop                                       unix:///
 multipass-docker   Used to connect to docker runnin on a multipass vm   ssh://ubuntu@192.168.69.3
 ```
 
-## Scanning Images
+### Scanning Images
 
-### [Option 1] Installed Trivy
+#### [Option 1] Installed Trivy
 
-#### Install
+##### Install
 
 ```shell
 brew install trivy
@@ -144,7 +147,7 @@ trivy --docker-host unix:///$HOME/.docker/run/docker.sock \
 ```
 
 
-### [Option 2] Using Docker
+#### [Option 2] Using Docker
 
 When running ensure to set `--docker-host` with the docker endpoint output outlined in the “Docker Context” section above
 
