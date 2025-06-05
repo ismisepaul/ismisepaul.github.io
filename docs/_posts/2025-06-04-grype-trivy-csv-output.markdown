@@ -28,8 +28,8 @@ Get the SHA value of the local image you want to scan (example ece images)
 docker images | ggrep ubuntu
 ```
 
-Example output
-- SHA == `9d45648b4030`
+Example output (SHA == `9d45648b4030`)
+
 ```
 ubuntu           latest            9d45648b4030   7 days ago      101MB
 ```
@@ -47,7 +47,7 @@ Using the template below will allow you to output the results in a CSV format
 - Create a new folder called `grype` on your filesystem e.g. `$HOME/security-tools/grype`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```shell
+```
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range .Matches}}
 "{{.Artifact.Name}}","{{.Artifact.Version}}","{{.Vulnerability.ID}}","{{.Vulnerability.Severity}}"
@@ -65,8 +65,11 @@ brew install grype
 ```
 
 #### Run
+
+SHA `9d45648b4030` is that of the Ubuntu image - see "Preparing Images" above
+
 ```shell
-grype -o template -t $HOME/security-tools/grype/csv.tmpl 9d45648b4030  # sha which relates to ubuntu (see Preparing Images)
+grype -o template -t $HOME/security-tools/grype/csv.tmpl 9d45648b4030  
 ```
 
 ### [Option 2] Using Docker
@@ -92,7 +95,7 @@ This will allow you to output the results in a CSV format
 - Create a new folder called `trivy` on your filesystem e.g. `$HOME/security-tools/trivy`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```shell
+```
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range . }}
 {{- range .Vulnerabilities }}
@@ -130,9 +133,11 @@ brew install trivy
 
 When running ensure to set `--docker-host` with the docker endpoint output outlined in the “Docker Context” section above
 
+SHA `9d45648b4030` is that of the Ubuntu image - see "Preparing Images" above
+
 ```shell
 trivy --docker-host unix:///$HOME/.docker/run/docker.sock \
-  image --format template --template @$HOME/security-tools/trivy/csv.tmpl 9d45648b4030 # sha which relates to ubuntu (see Preparing Images)
+  image --format template --template @$HOME/security-tools/trivy/csv.tmpl  
 ```
 
 
