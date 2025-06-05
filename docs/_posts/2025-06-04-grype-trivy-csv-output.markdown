@@ -6,10 +6,11 @@ categories: sca security-tools
 tag: trivy grype sca
 ---
 
-Both  and [Trivy](https://github.com/aquasecurity/trivy) are popular SCA tools 
-used predominantly to report on CVEs within products. However, they can be used in other ways. This post will outline 
-how to scan for CVEs (+GHSAs) and output those results to CSV. Both tools support templates as a way to output the 
-scanning results, this is what we'll leverage to output results to CSV. Assumes MacOS.
+Both [Grype](https://github.com/anchore/grype) and [Trivy](https://github.com/aquasecurity/trivy) are popular
+software composition analysis (SCA) tools used predominantly to report on CVEs within container images. However, they 
+can be used in other ways. This post will outline how to scan for CVEs (+GHSAs) and output those results to CSV. Both 
+tools support templates as a way to output the scanning results, this is what we'll leverage to output results to CSV. 
+Assumes MacOS.
 
 
 # Preparing Images
