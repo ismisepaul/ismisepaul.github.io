@@ -48,9 +48,9 @@ Using the template below will allow you to output the results in a CSV format
 
 {% raw %}
 ```
-"Package","Version Installed","Vulnerability ID","Severity"
+"Package","Version Installed","Vulnerability ID","Severity","Package Path"
 {{- range .Matches}}
-"{{.Artifact.Name}}","{{.Artifact.Version}}","{{.Vulnerability.ID}}","{{.Vulnerability.Severity}}"
+"{{.Artifact.Name}}","{{.Artifact.Version}}","{{.Vulnerability.ID}}","{{.Vulnerability.Severity}}","{{ (index .Artifact.Locations 0).Path }}"
 {{- end}}
 ```
 {% endraw %}
@@ -98,12 +98,13 @@ This will allow you to output the results in a CSV format
 
 {% raw %}
 ```
-"Package","Version Installed","Vulnerability ID","Severity"
+"Package","Version Installed","Vulnerability ID","Severity","Package Path"
 {{- range . }}
-{{- range .Vulnerabilities }}
-"{{ .PkgName }}","{{ .InstalledVersion }}","{{ .VulnerabilityID }}","{{ .Severity }}"
+  {{- range .Vulnerabilities }}
+"{{ .PkgName }}","{{ .InstalledVersion }}","{{ .VulnerabilityID }}","{{ .Severity }}","{{ .PkgPath }}"
+  {{- end }}
 {{- end }}
-{{- end }}
+
 ```
 {% endraw %}
 
