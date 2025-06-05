@@ -6,8 +6,6 @@ categories: sca security-tools
 tag: trivy grype sca
 ---
 
-# Intro
-
 Both  and [Trivy](https://github.com/aquasecurity/trivy) are popular SCA tools 
 used predominantly to report on CVEs within products. However, they can be used in other ways. This post will outline 
 how to scan for CVEs (+GHSAs) and output those results to CSV. Both tools support templates as a way to output the 
@@ -47,7 +45,7 @@ Using the template below will allow you to output the results in a CSV format
 - Create a new folder called `grype` on your filesystem e.g. `$HOME/security-tools/grype`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```
+```json
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range .Matches}}
 "{{.Artifact.Name}}","{{.Artifact.Version}}","{{.Vulnerability.ID}}","{{.Vulnerability.Severity}}"
@@ -95,7 +93,7 @@ This will allow you to output the results in a CSV format
 - Create a new folder called `trivy` on your filesystem e.g. `$HOME/security-tools/trivy`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```
+```json
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range . }}
 {{- range .Vulnerabilities }}
