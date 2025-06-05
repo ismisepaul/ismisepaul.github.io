@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Outputting CSV with Grype & Trivy"
-date:   2025-06-05 10:02:12 +0000
+title:  "Outputting CSV findings with Grype & Trivy"
+date:   2025-06-04 10:02:12 +0000
 categories: sca security-tools
 tag: trivy grype sca
 ---
