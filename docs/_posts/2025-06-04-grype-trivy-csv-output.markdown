@@ -45,12 +45,14 @@ Using the template below will allow you to output the results in a CSV format
 - Create a new folder called `grype` on your filesystem e.g. `$HOME/security-tools/grype`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```json
+{% raw %}
+```
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range .Matches}}
 "{{.Artifact.Name}}","{{.Artifact.Version}}","{{.Vulnerability.ID}}","{{.Vulnerability.Severity}}"
 {{- end}}
 ```
+{% endraw %}
 
 ## Scanning Images
 
@@ -93,7 +95,8 @@ This will allow you to output the results in a CSV format
 - Create a new folder called `trivy` on your filesystem e.g. `$HOME/security-tools/trivy`
 - Copy the template below and save it as `csv.tmpl` to the newly created folder.
 
-```json
+{% raw %}
+```
 "Package","Version Installed","Vulnerability ID","Severity"
 {{- range . }}
 {{- range .Vulnerabilities }}
@@ -101,7 +104,7 @@ This will allow you to output the results in a CSV format
 {{- end }}
 {{- end }}
 ```
-
+{% endraw %}
 
 ## Docker Context
 
