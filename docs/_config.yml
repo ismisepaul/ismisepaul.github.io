@@ -25,8 +25,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - { title: Mail, icon: envelope, url: "mailto:ismisepaul@proton.me" }
-  - { title: Twitter, icon: twitter, url: "https://twitter.com/ismisepaul" }
-  - { title: Mastodon, icon: mastodon, url: "https://infosec.exchange/@ismisepaul" }
+  - { title: Bluesky, icon: bluesky, url: "https://bsky.app/profile/ismisepaul.bsky.social" }
   - { title: Github, icon: github, url: "https://github.com/ismisepaul" }
   - { title: Keybase, icon: keybase, url: "https://keybase.io/ismisepaul" }
   - { title: Subscribe, icon: rss, url: "/feed.xml"}
