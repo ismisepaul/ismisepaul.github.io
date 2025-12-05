@@ -2,7 +2,7 @@
 
 title: "_scurity"
 author: "ismisepaul"
-description: "Thoughts on product security, software development, application security and hacking."
+description: "These are mainly my notes, which can be anything from product security, software supply chain, software development, tech, conference notes."
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
