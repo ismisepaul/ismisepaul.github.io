@@ -11,6 +11,7 @@ Indexing Elastic docs, blogs, etc. into Elasticsearch is simple with the Elastic
 Elastic web crawler to push content from Elastic's documentation site into your Elasticsearch instance. Note this 
 can be done for other sites as well.
 
+
 ## Prerequisites
 
 1. Get your connection details, see guide https://www.elastic.co/docs/solutions/search/search-connection-details
@@ -85,7 +86,7 @@ Since we created a data view using the `web-crawl-*` index pattern, you can use 
 named indices. Here are some other useful Elastic documentation indices you can crawl:
 
 
-`web-crawl-elastic-blog`: Crawl Elastic's blog site at `https://www.elastic.co/blog`
+Crawl Elastic's blog site at `https://www.elastic.co/blog`: 
 
 ```bash
 cat > crawl-config-elastic-blog.yml << EOF
@@ -120,7 +121,7 @@ domains:
 EOF
 ```
 
-`web-crawl-elastic-security-advisories`: Crawl Elastic's security advisories at `https://discuss.elastic.co/c/announcements/security-announcements/31`
+Crawl Elastic's security advisories at `https://discuss.elastic.co/c/announcements/security-announcements/31`:
 
 ```bash
 cat > crawl-config-elastic-security-advisories.yml << EOF
@@ -158,7 +159,7 @@ EOF
 ```
 
 
-`web-crawl-elastic-security-labs`: Crawl Elastic's security labs at `https://www.elastic.co/security-labs`
+Crawl Elastic's security labs at `https://www.elastic.co/security-labs`: 
 
 ```bash
 cat > crawl-config-elastic-security-labs.yml << EOF
