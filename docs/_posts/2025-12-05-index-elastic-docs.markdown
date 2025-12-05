@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Crawling & Indexing Elastic Docs"
+title:  "Crawling & Indexing Elastic Documentation"
 date:   2025-12-05 10:59:12 +0000
 categories: elasticsearch elastic web-crawling
 tag: elasticsearch indexing web-crawling
