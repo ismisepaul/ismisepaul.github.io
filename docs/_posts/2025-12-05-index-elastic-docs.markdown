@@ -14,7 +14,7 @@ can be done for other sites as well.
 
 ## Prerequisites
 
-1. Get your connection details, see guide https://www.elastic.co/docs/solutions/search/search-connection-details
+1. Get your connection details, see [guide](https://www.elastic.co/docs/solutions/search/search-connection-details)
 2. Also use the link above to generate an API Key
 3. Docker installed on your local machine
 
