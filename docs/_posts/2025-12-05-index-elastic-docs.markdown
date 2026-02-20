@@ -15,7 +15,56 @@ can be done for other sites as well.
 ## Prerequisites
 
 1. Get your connection details, see [guide](https://www.elastic.co/docs/solutions/search/search-connection-details)
-2. Also use the link above to generate an API Key
+2. Generate an API Key using the developer tools
+```json
+POST /_security/api_key
+{
+  "name": "pmccann-cursor-mcp-read-only",
+  "expiration": "90d",
+  "role_descriptors": {
+    "mcp-access": {
+      "cluster": [
+        "monitor_inference"
+      ],
+      "indices": [
+        {
+          "names": [
+            "*"
+          ],
+          "privileges": [
+            "read",
+            "view_index_metadata"
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "application": "kibana-.kibana",
+          "privileges": [
+            "feature_agentBuilder.read"
+          ],
+          "resources": [
+            "space:default"
+          ]
+        }
+      ]
+    },
+    "read-only-role": {
+      "indices": [
+        {
+          "names": [
+            "*"
+          ],
+          "privileges": [
+            "read"
+          ],
+          "allow_restricted_indices": false
+        }
+      ]
+    }
+  }
+}
+```
 3. Docker installed on your local machine
 
 ## Elastic Crawler Configuration File
